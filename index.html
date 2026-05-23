@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Danys Hair Salon — clean cuts, sharp fades, and easy online booking."
+    />
+    <title>Danys Hair Salon | Book Your Cut</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top">Danys Hair Salon</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#services">Services</a>
+        <a href="#book">Book</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="btn btn-small header-cta" href="#book">Book now</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Walk-ins welcome · Appointments preferred</p>
+        <h1>Sharp cuts. Simple booking.</h1>
+        <p class="hero-lead">
+          At Danys Hair Salon you get a clean, professional cut without the hassle.
+          Pick a service, choose your time, and we’ll confirm your appointment.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#book">Book an appointment</a>
+          <a
+            id="quick-whatsapp"
+            class="btn btn-ghost"
+            href="#book"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Message on WhatsApp</a
+          >
+          <a class="btn btn-ghost" href="tel:+15551234567">Call (555) 123-4567</a>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="section-head">
+          <h2>Services &amp; prices</h2>
+          <p>Clear pricing. No surprises at the chair.</p>
+        </div>
+        <ul class="service-list">
+          <li>
+            <div>
+              <h3>Classic haircut</h3>
+              <p>Wash, cut, and style.</p>
+            </div>
+            <span class="price">$30</span>
+          </li>
+          <li>
+            <div>
+              <h3>Skin fade</h3>
+              <p>Precision fade with lineup.</p>
+            </div>
+            <span class="price">$35</span>
+          </li>
+          <li>
+            <div>
+              <h3>Beard trim</h3>
+              <p>Shape and detail.</p>
+            </div>
+            <span class="price">$15</span>
+          </li>
+          <li>
+            <div>
+              <h3>Haircut + beard</h3>
+              <p>Full groom package.</p>
+            </div>
+            <span class="price">$42</span>
+          </li>
+          <li>
+            <div>
+              <h3>Kids cut (12 &amp; under)</h3>
+              <p>Patient, friendly service.</p>
+            </div>
+            <span class="price">$22</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section highlights">
+        <article>
+          <h3>Fast booking</h3>
+          <p>Send your request in under a minute by text or WhatsApp.</p>
+        </article>
+        <article>
+          <h3>Skilled barbers</h3>
+          <p>Consistent fades, lineups, and styles that fit your look.</p>
+        </article>
+        <article>
+          <h3>Fair prices</h3>
+          <p>Quality work at straightforward rates you can see upfront.</p>
+        </article>
+      </section>
+
+      <section id="book" class="section booking">
+        <div class="section-head">
+          <h2>Book your appointment</h2>
+          <p>Fill in the form. We’ll open a message with your details ready to send.</p>
+        </div>
+
+        <form id="booking-form" class="booking-form" novalidate>
+          <label>
+            Your name
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+
+          <label>
+            Phone number
+            <input
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="(555) 123-4567"
+              required
+            />
+          </label>
+
+          <label>
+            Service
+            <select name="service" required>
+              <option value="">Choose a service</option>
+              <option>Classic haircut — $30</option>
+              <option>Skin fade — $35</option>
+              <option>Beard trim — $15</option>
+              <option>Haircut + beard — $42</option>
+              <option>Kids cut — $22</option>
+            </select>
+          </label>
+
+          <div class="form-row">
+            <label>
+              Preferred date
+              <input name="date" type="date" required />
+            </label>
+            <label>
+              Preferred time
+              <input name="time" type="time" required />
+            </label>
+          </div>
+
+          <label>
+            Notes <span class="optional">(optional)</span>
+            <textarea
+              name="notes"
+              rows="3"
+              placeholder="Example: low fade, keep length on top"
+            ></textarea>
+          </label>
+
+          <fieldset class="booking-channel">
+            <legend>Send request via</legend>
+            <label class="radio">
+              <input type="radio" name="channel" value="whatsapp" checked />
+              WhatsApp
+            </label>
+            <label class="radio">
+              <input type="radio" name="channel" value="sms" />
+              Text message (SMS)
+            </label>
+          </fieldset>
+
+          <button class="btn btn-full" type="submit">Send booking request</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="visit" class="section visit">
+        <div class="section-head">
+          <h2>Visit us</h2>
+        </div>
+        <div class="visit-grid">
+          <div>
+            <h3>Hours</h3>
+            <ul class="hours">
+              <li><span>Mon – Fri</span><span>9:00 AM – 7:00 PM</span></li>
+              <li><span>Saturday</span><span>8:00 AM – 5:00 PM</span></li>
+              <li><span>Sunday</span><span>Closed</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Location</h3>
+            <p>123 Main Street<br />Your City, ST 12345</p>
+            <a
+              class="link"
+              href="https://maps.google.com/?q=123+Main+Street"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Open in Google Maps</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Danys Hair Salon. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
